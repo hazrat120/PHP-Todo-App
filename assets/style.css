@@ -1,0 +1,312 @@
+/* ============= Index styled Start =========== */
+/* General Styling */
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #2e7d32, #1b5e20);
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container Styling */
+.index-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 500px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.index-container:hover {
+  transform: scale(1.02);
+}
+
+/* Task List */
+.index-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.index-li {
+  background: #f9f9f9;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effect */
+.index-li:hover {
+  background: #e8f5e9;
+}
+
+/* Task Text */
+.index-span {
+  font-size: 16px;
+  font-weight: bold;
+  flex: 1;
+}
+
+/* Action Buttons */
+.index-a {
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+/* Edit Button */
+.index-a[href*="edit-task.php"] {
+  background: #ff9800;
+  color: white;
+  margin-right: 8px;
+}
+
+.index-a[href*="edit-task.php"]:hover {
+  background: #e68900;
+}
+
+/* Delete Button */
+.index-a[href*="delete-task.php"] {
+  background: #d32f2f;
+  color: white;
+}
+
+.index-a[href*="delete-task.php"]:hover {
+  background: #b71c1c;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .index-container {
+    width: 90%;
+  }
+
+  .index-li {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .index-a {
+    margin-top: 5px;
+    width: 100%;
+    display: block;
+  }
+}
+
+/* ============= Index style End ============= */
+
+/* ============ Add task style =========== */
+.add-task-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #2e7d32, #1b5e20);
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.add-task-container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  border: 2px solid transparent;
+}
+
+.add-task-container:hover {
+  transform: scale(1.05);
+}
+
+.add-task-h2 {
+  margin-bottom: 15px;
+  color: #2e7d32;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.add_task_form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.add-task-input {
+  flex: 1;
+  padding: 14px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  background: #f9f9f9;
+}
+
+.add-task-input:focus {
+  border-color: #4caf50;
+  background: #fff;
+}
+
+.add-task-button {
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.add-task-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.add-task-message {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+  display: none;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.add-task-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.add-task-btn:hover {
+  background: #45a049;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  form {
+    flex-direction: column;
+    gap: 12px;
+  }
+  button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ============ Add task style end =========== */
+
+/* ======= Edit task style start ==========  */
+.edit-container {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.edit-container:hover {
+  transform: scale(1.02);
+}
+
+.edit-form input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.edit-form input:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 8px rgba(46, 125, 50, 0.3);
+}
+
+.edit-form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.edit-form button:hover {
+  background: #1b5e20;
+  transform: scale(1.05);
+}
+
+@media (max-width: 500px) {
+  .edit-container {
+    width: 90%;
+  }
+
+  .edit-form button {
+    font-size: 14px;
+  }
+}
+
+/* ======= Edit task style End ==========  */
